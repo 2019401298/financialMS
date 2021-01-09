@@ -24,7 +24,11 @@ import javax.swing.JScrollPane;
 import javax.swing.JTable;
 import java.awt.event.ActionListener;
 import java.awt.event.ActionEvent;
-
+/**
+ * 管理员管理职员信息界面，
+ * @author 罗焰林
+ *
+ */
 public class Staffm extends JFrame {
 
 	private JPanel contentPane;

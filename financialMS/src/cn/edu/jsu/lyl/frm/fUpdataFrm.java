@@ -23,7 +23,11 @@ import javax.swing.JTextField;
 import javax.swing.JButton;
 import java.awt.event.ActionListener;
 import java.awt.event.ActionEvent;
-
+/**
+ * 管理员修改员工工资界面
+ * @author 罗焰林
+ *
+ */
 public class fUpdataFrm extends JFrame {
 
 	private JPanel contentPane;
@@ -53,18 +57,18 @@ public class fUpdataFrm extends JFrame {
 	/**
 	 * Launch the application.
 	 */
-//	public static void main(String[] args) {
-//		EventQueue.invokeLater(new Runnable() {
-//			public void run() {
-//				try {
-//					fUpdataFrm frame = new fUpdataFrm();
-//					frame.setVisible(true);
-//				} catch (Exception e) {
-//					e.printStackTrace();
-//				}
-//			}
-//		});
-//	}
+	public static void main(String[] args) {
+		EventQueue.invokeLater(new Runnable() {
+			public void run() {
+				try {
+					fUpdataFrm frame = new fUpdataFrm();
+					frame.setVisible(true);
+				} catch (Exception e) {
+					e.printStackTrace();
+				}
+			}
+		});
+	}
 
 	/**
 	 * Create the frame.
@@ -205,7 +209,9 @@ public class fUpdataFrm extends JFrame {
 			return false;
 		return true;
 	}
-
+	/*
+	 * 修改员工具体工资
+	 */
 	public void caozuo() {
 		DatabaseConnection conn2 = new DatabaseConnection();
 		String sql = "UPDATE Employee SET baseM=?,socialM=?,trafficA=?,communicationA=?,meritA=?,individualA=?,overday=?,overM=?,lostday=?,lostM=? WHERE eid=?";
@@ -233,7 +239,9 @@ public class fUpdataFrm extends JFrame {
 			e.printStackTrace();
 		}
 	}
-
+	/*
+	 * 查找数据库操作
+	 */
 	public void chazhao() {
 		DatabaseConnection conn3 = new DatabaseConnection();
 		String sql = "SELECT * FROM Employee";

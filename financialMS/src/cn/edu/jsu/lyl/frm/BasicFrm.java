@@ -25,7 +25,11 @@ import javax.swing.RowFilter;
 
 import java.awt.event.ActionListener;
 import java.awt.event.ActionEvent;
-
+/**
+ * 管理员管理员工工资界面
+ * @author 罗焰林
+ *
+ */
 public class BasicFrm extends JFrame {
 
 	private JPanel contentPane;

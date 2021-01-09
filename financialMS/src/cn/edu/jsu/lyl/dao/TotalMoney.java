@@ -7,7 +7,11 @@ import java.sql.Statement;
 
 import cn.edu.jsu.lyl.dbc.DatabaseConnection;
 import cn.edu.jsu.lyl.frm.MainFrm;
-
+/**
+ * 统计员工工资
+ * @author 罗焰林
+ *
+ */
 public class TotalMoney {
 	static String A = null;
 	static String B = null;
@@ -20,7 +24,9 @@ public class TotalMoney {
 	static String I = null;
 	static String J = null;
 	static String XM = null;
-
+	/*
+	 * 计算个人工资
+	 */
 	public static int chazhao(String ID) {
 		DatabaseConnection conn3 = new DatabaseConnection();
 		String sql = "SELECT * FROM Employee";
@@ -52,6 +58,9 @@ public class TotalMoney {
 				- parseInt(J);
 	}
 
+	/*
+	 * 规范计算时的字符串
+	 */
 	public static int parseInt(String intStr) {
 //		//1.去除空格
 //		 intStr = intStr.trim(); 
@@ -66,6 +75,9 @@ public class TotalMoney {
 //		return parseInt(A)-parseInt(B)+parseInt(C)+parseInt(D)+parseInt(E)-parseInt(F)+parseInt(H)-parseInt(J);
 //	}
 
+	/*
+	 * 计算结果插入到数据库
+	 */
 	public static void charu() {
 		DatabaseConnection dbconn = new DatabaseConnection();// 使用1中定义的连接数据库的类
 		String sql = "UPDATE Employee SET total=? WHERE eid=?";

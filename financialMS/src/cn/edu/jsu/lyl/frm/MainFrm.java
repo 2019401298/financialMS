@@ -28,7 +28,11 @@ import java.sql.ResultSet;
 import java.sql.SQLException;
 import java.sql.Statement;
 import java.awt.event.ActionEvent;
-
+/**
+ * 主界面，包含登录和注册
+ * @author 罗焰林
+ *
+ */
 public class MainFrm extends JFrame {
 
 	private JPanel contentPane;
@@ -202,6 +206,9 @@ public class MainFrm extends JFrame {
 		contentPane.add(sexJL);
 	}
 
+	/*
+	 * 验证条件：文本框不能为空
+	 */
 	// 编号规范性
 	public boolean cheakInputID() {
 		if (YHMtextField.getText().length() == 0) {
@@ -212,6 +219,9 @@ public class MainFrm extends JFrame {
 		return true;
 	}
 
+	/*
+	 * 验证条件：文本框不能为空
+	 */
 	// 密码规范性
 	public boolean cheakInputMM() {
 		if (MMtextField.getText().length() == 0) {
@@ -221,7 +231,9 @@ public class MainFrm extends JFrame {
 		}
 		return true;
 	}
-
+/*
+ * 验证条件：文本框不能为空
+ */
 	// 选择用户规范性
 	public boolean cheakInputsex() {
 		if (!((JRadioButton) PTJR).isSelected()) {
@@ -232,7 +244,9 @@ public class MainFrm extends JFrame {
 		}
 		return true;
 	}
-
+	/*
+	 * 验证码不能为空
+	 */
 	public boolean cheakInputYZM() {// 验证码验证登录
 		if (!YZMTF.getText().equalsIgnoreCase(s1)) {
 			return false;
@@ -240,6 +254,9 @@ public class MainFrm extends JFrame {
 		return true;
 	}
 
+	/*
+	 * 职员登录操作
+	 */
 	public boolean cheakInputYZ() {// 职员验证登录验证登录
 		DatabaseConnection dbconn = new DatabaseConnection();// 数据库连接
 		String sql = "SELECT* from Employee";
@@ -263,6 +280,9 @@ public class MainFrm extends JFrame {
 		return false;
 	}
 
+	/*
+	 *管理员验证登录
+	 */
 	public boolean cheakInputYZ2() {// 管理员验证
 		DatabaseConnection dbconn = new DatabaseConnection();// 数据库连接
 		String sql = "SELECT* from Managedate";

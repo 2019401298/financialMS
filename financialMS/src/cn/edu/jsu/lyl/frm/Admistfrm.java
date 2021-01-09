@@ -21,7 +21,11 @@ import java.awt.event.ActionEvent;
 import javax.swing.JButton;
 import javax.swing.JMenuItem;
 import javax.swing.JOptionPane;
-
+/**
+ * 员工管理界面
+ * @author 罗焰林
+ *
+ */
 public class Admistfrm extends JFrame {
 
 	private JPanel contentPane;
@@ -29,19 +33,19 @@ public class Admistfrm extends JFrame {
 	/**
 	 * Launch the application.
 	 */
-//	public static void main(String[] args) {
-//		EventQueue.invokeLater(new Runnable() {
-//			public void run() {
-//				try {
-//					Admistfrm frame = new Admistfrm();
-//					frame.setVisible(true);
-//					frame.setLocationRelativeTo(null);// 窗体居中
-//				} catch (Exception e) {
-//					e.printStackTrace();
-//				}
-//			}
-//		});
-//	}
+	public static void main(String[] args) {
+		EventQueue.invokeLater(new Runnable() {
+			public void run() {
+				try {
+					Admistfrm frame = new Admistfrm();
+					frame.setVisible(true);
+					frame.setLocationRelativeTo(null);// 窗体居中
+				} catch (Exception e) {
+					e.printStackTrace();
+				}
+			}
+		});
+	}
 
 	/**
 	 * Create the frame.
@@ -67,7 +71,7 @@ public class Admistfrm extends JFrame {
 		});
 		mnNewMenu.add(mntmNewMenuItem);
 		
-		JMenu mnNewMenu_1 = new JMenu("个人工资查询");
+		JMenu mnNewMenu_1 = new JMenu("个人工资管理");
 		menuBar.add(mnNewMenu_1);
 		
 		JMenuItem DDCZ = new JMenuItem("\u6253\u5F00\u64CD\u4F5C\u9875\u9762");
@@ -79,7 +83,7 @@ public class Admistfrm extends JFrame {
 		});
 		mnNewMenu_1.add(DDCZ);
 		
-		JMenu mnNewMenu_3 = new JMenu("公司经营查询");
+		JMenu mnNewMenu_3 = new JMenu("公司经营管理");
 		menuBar.add(mnNewMenu_3);
 		
 		JMenuItem mntmNewMenuItem_2 = new JMenuItem("\u6253\u5F00\u64CD\u4F5C\u9875\u9762");
@@ -91,7 +95,7 @@ public class Admistfrm extends JFrame {
 		});
 		mnNewMenu_3.add(mntmNewMenuItem_2);
 		
-		JMenu mnNewMenu_4 = new JMenu("财务收支查询");
+		JMenu mnNewMenu_4 = new JMenu("财务收支管理");
 		menuBar.add(mnNewMenu_4);
 		
 		JMenuItem mntmNewMenuItem_1 = new JMenuItem("打开操作页面");

@@ -4,7 +4,11 @@ import java.awt.*; //导入类
 import java.awt.image.*;
 import java.util.*;
 
-//随机生成彩色验证码
+/**
+ * 随机生成彩色验证码
+ * @author 罗焰林
+ *
+ */
 
 public class VerifyCode {
 	static Random r = new Random();

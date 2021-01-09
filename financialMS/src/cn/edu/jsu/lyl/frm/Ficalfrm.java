@@ -23,7 +23,11 @@ import javax.swing.JScrollPane;
 import javax.swing.JTable;
 import java.awt.event.ActionListener;
 import java.awt.event.ActionEvent;
-
+/**
+ * 管理员管理职员请求的报销记录
+ * @author 罗焰林
+ *
+ */
 public class Ficalfrm extends JFrame {
 
 	private JPanel contentPane;
@@ -34,18 +38,18 @@ public class Ficalfrm extends JFrame {
 	/**
 	 * Launch the application.
 	 */
-//	public static void main(String[] args) {
-//		EventQueue.invokeLater(new Runnable() {
-//			public void run() {
-//				try {
-//					Ficalfrm frame = new Ficalfrm();
-//					frame.setVisible(true);
-//				} catch (Exception e) {
-//					e.printStackTrace();
-//				}
-//			}
-//		});
-//	}
+	public static void main(String[] args) {
+		EventQueue.invokeLater(new Runnable() {
+			public void run() {
+				try {
+					Ficalfrm frame = new Ficalfrm();
+					frame.setVisible(true);
+				} catch (Exception e) {
+					e.printStackTrace();
+				}
+			}
+		});
+	}
 
 	/**
 	 * Create the frame.
@@ -115,10 +119,10 @@ public class Ficalfrm extends JFrame {
 		FGXJT.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent e) {
 				modell.getDataVector().clear();
-				JCheckBox box = new JCheckBox();
-				DefaultTableModel dtm2=(DefaultTableModel)table.getModel();//获取表格模型
+//				JCheckBox box = new JCheckBox();
+//				DefaultTableModel dtm2=(DefaultTableModel)table.getModel();//获取表格模型
 				Stuoperate.initTable2(modell);
-				table.updateUI();//更新显示
+//				table.updateUI();//更新显示
 //				modell.getDataVector().clear();
 //				Stuoperate.initTable2(modell);// 调用方法装载数据
 			}

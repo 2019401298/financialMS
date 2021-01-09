@@ -3,7 +3,11 @@ package cn.edu.jsu.lyl.dbc;
 import java.sql.Connection;
 import java.sql.DriverManager;
 import java.sql.SQLException;
-
+/**
+ * 数据库的连接
+ * @author 罗焰林
+ *
+ */
 //数据库的连接
 
 public class DatabaseConnection {
